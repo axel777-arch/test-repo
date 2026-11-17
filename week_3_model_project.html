@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A student profile and interactive learning goals page.">
+  <title>My Learning Profile</title>
+  <link rel="stylesheet" href="week_3_model_project.css">
+  <script src="week_3_model_project.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="My Learning Profile home">Learn<span>Lab</span></a>
+    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#skills">Skills</a><a href="#goals">Goals</a><a href="#contact">Contact</a></nav>
+    <button class="button button-quiet" id="themeButton" type="button" aria-pressed="false">Switch theme</button>
+  </header>
+  <main id="home">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">STUDENT PROFILE · WEB DEVELOPMENT</p>
+        <h1>Building ideas<br><span>for the web.</span></h1>
+        <p class="lead">I am learning to turn simple ideas into useful, accessible and responsive websites.</p>
+        <div class="hero-actions"><a class="button" href="#goals">See my learning goals</a><button class="button button-outline" id="greetButton" type="button">Say hello</button></div>
+        <p class="feedback" id="greeting" role="status" aria-live="polite">Welcome to my learning profile.</p>
+      </div>
+      <aside class="hero-card" aria-label="Current learning progress"><p class="card-label">CURRENT FOCUS</p><p class="big-number">03</p><p class="card-title">Weeks into web development</p><div class="progress-track"><span></span></div><p class="muted">HTML · CSS · JavaScript · Git</p></aside>
+    </section>
+    <section class="section-wrap content-section" id="about"><div class="section-heading"><p class="eyebrow">01 / ABOUT</p><h2>A little about me</h2></div><div class="about-grid"><p class="about-intro">I enjoy learning by building. This page brings together semantic HTML, accessible forms, CSS styling and layout, responsive design, JavaScript interactions and Git version control.</p><div class="info-panel"><p><strong>Learning approach</strong><br><span class="muted">Build · Test · Improve</span></p><p><strong>Current project</strong><br><span class="muted">An interactive profile page</span></p></div></div></section>
+    <section class="section-wrap content-section" id="skills"><div class="section-heading"><p class="eyebrow">02 / SKILLS</p><h2>What I have learned</h2></div><div class="skill-grid">
+      <article class="skill-card"><span class="skill-number">01</span><h3>HTML</h3><p>Semantic structure, headings, links, images, lists and accessible forms.</p></article>
+      <article class="skill-card"><span class="skill-number">02</span><h3>CSS</h3><p>Selectors, cascade, specificity, box model, Flexbox, Grid and responsive layouts.</p></article>
+      <article class="skill-card"><span class="skill-number">03</span><h3>JavaScript</h3><p>Variables, conditions, loops, functions, arrays, objects, DOM selection and events.</p></article>
+      <article class="skill-card"><span class="skill-number">04</span><h3>Git</h3><p>Working directory, staging, commits, branches, remotes and GitHub collaboration.</p></article>
+    </div></section>
+    <section class="section-wrap content-section" id="goals"><div class="section-heading"><p class="eyebrow">03 / LEARNING GOALS</p><h2>My next steps</h2></div>
+      <form class="goal-form" id="goalForm"><label for="goalInput">Add a learning goal</label><div class="input-row"><input id="goalInput" name="goal" type="text" placeholder="e.g. Practise CSS Grid" required maxlength="80"><button class="button" type="submit">Add goal</button></div><p class="form-help" id="formMessage" role="status" aria-live="polite">Add a goal to build your checklist.</p></form>
+      <ul class="goal-list" id="goalList"><li><label><input type="checkbox"> Review semantic HTML</label></li><li><label><input type="checkbox"> Practise responsive CSS</label></li><li><label><input type="checkbox"> Build more DOM interactions</label></li></ul>
+    </section>
+    <section class="section-wrap content-section" id="contact"><div class="section-heading"><p class="eyebrow">04 / CONTACT</p><h2>Send a message</h2></div>
+      <form class="contact-form" id="contactForm"><div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required></div><div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></div><div class="field field-full"><label for="message">Message</label><textarea id="message" name="message" rows="4" required></textarea></div><div class="field-full"><button class="button" type="submit">Check message</button><p class="form-help" id="contactFeedback" role="status" aria-live="polite">This demo checks the form in your browser; it does not send email.</p></div></form>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Made while learning the fundamentals of the web.</p><a href="#home">Back to top ↑</a></footer>
+</body>
+</html>
